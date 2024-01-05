@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+ body{
+    background-image: url("bg1.jpg");
+ }
+ .heading{
+    color: #ffffff;
+ }
+    .contact-section {
+      margin: 20px;
+      padding: 20px;
+      align-items: center;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+      background-color: #ffffff;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #ce2222;
+      color: rgb(255, 255, 255);
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading"><center><a href="aboutme.html">Contact Us</a></center></h1>
+  
+  <div class="contact-section">
+    <h2>FeedBack Form</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+ 
+      const formData = new FormData(this);   
+      console.log('Form submitted!', formData);   
+      alert('Form submitted!');
+      this.reset();
+    });
+    <a href="index.html" class="send"></a>
+  </script>
+     <footer>
+        <p><center>&copy; 2023 Karthik S M. &copy;All rights reserved.</center></p>
+    </footer>
+</body>
+</html>
